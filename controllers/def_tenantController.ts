@@ -6,7 +6,7 @@ interface Tenant {
   tenant_name: string;
 }
 
-export const usersController = {
+export const def_tenantController = {
   //Get Tenants
   async getTenants(req: Request, res: Response) {
     const result = await prisma.def_tenants.findMany();

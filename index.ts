@@ -1,5 +1,10 @@
 import { Request, Response } from "express";
-import { userRoutes } from "./routes";
+import {
+  personsRoutes,
+  tenantsRoutes,
+  user_credentialsRoutes,
+  usersRoutes,
+} from "./routes";
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -17,7 +22,10 @@ app.get("/", (req: Request, res: Response) => {
   res.send("server Testing 3000 port");
 });
 
-app.use("/api/tenants", userRoutes);
+app.use("/api/tenants", tenantsRoutes);
+app.use("/api/users", usersRoutes);
+app.use("/api/persons", personsRoutes);
+app.use("/api/user_credentials", user_credentialsRoutes);
 
 app.listen(port, () => console.log(`server start on port ${port}`));
 

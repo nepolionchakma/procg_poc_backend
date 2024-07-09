@@ -1,2 +1,5 @@
-import userRoutes from "./tenantRoute";
-export { userRoutes };
+import tenantsRoutes from "./def_tenantRoute";
+import usersRoutes from "./def_usersRoute";
+import personsRoutes from "./def_personsRoute";
+import user_credentialsRoutes from "./def_user_credentials";
+export { tenantsRoutes, usersRoutes, personsRoutes, user_credentialsRoutes };

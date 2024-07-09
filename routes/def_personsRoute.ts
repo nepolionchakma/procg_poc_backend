@@ -1,0 +1,10 @@
+import { Router } from "express";
+import { def_personsController } from "../controllers/def_personsController";
+const router = Router();
+router.get("/", def_personsController.getPersons);
+router.get("/person/:user_id", def_personsController.getUniquePerson);
+router.post("/create", def_personsController.createPerson);
+router.post("/upsert", def_personsController.upserPerson);
+router.put("/person/:user_id/update", def_personsController.updatePerson);
+router.delete("/delete/:user_id", def_personsController.deletePerson);
+export default router;
